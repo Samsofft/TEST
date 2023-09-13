@@ -136,7 +136,7 @@ async def reply_to_user(client:Client,message:Message):
     
 async def admin_start(message:Message):
     usersManager.change_current_keyboard(message.chat.id,'1')
-    await message.reply_text(f'المدير {message.chat.first_name}',reply_markup=KeyboardsManager.get_keyboard_markup(1))
+    await message.reply_text(f'مرحبا بك , المدير {message.chat.first_name}',reply_markup=KeyboardsManager.get_keyboard_markup(1))
    
 async def add_button_with_reply_keyboard(message:Message):
     button_name = message.text[13:]
